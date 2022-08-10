@@ -1,0 +1,1 @@
+DATA_WIDTH = 4
