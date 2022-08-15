@@ -1,9 +1,11 @@
 from adder_if import adder_if
+from uvm.base.sv import sv
+from uvm.base import run_test
 
 import cocotb
 
 async def initial_run_test(dut, vif):
-    from uvm.base import UVMCoreService
+    from uvm.base import UVMCoreService, UVMConfigDb
     cs_ = UVMCoreService.get()
     UVMConfigDb.set(None, "*", "vif", vif)
     await run_test()

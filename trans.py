@@ -7,10 +7,8 @@ class trans(UVMSequenceItem, crv.Randomized) :
 		self.input1 = 0
 		self.input2 = 0
 		self.add_rand("input1", list(range(2**DATA_WIDTH)))
-	self.add_rand("input2", list(range(2**DATA_WIDTH)))
+        self.add_rand("input2", list(range(2**DATA_WIDTH)))
 
-
-	
 	uvm_object_utils_begin(bus_trans)
 	uvm_field_int('input1', UVM_ALL_ON)
 	uvm_field_int('input2', UVM_ALL_ON)
