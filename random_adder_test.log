@@ -1,0 +1,241 @@
+/Library/Developer/CommandLineTools/usr/bin/make results.xml
+MODULE=tb_top TESTCASE= TOPLEVEL=adder TOPLEVEL_LANG=verilog \
+        /usr/local/bin/vvp -M /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/cocotb/libs -m libcocotbvpi_icarus   sim_build/sim.vvp +UVM_TESTNAME=test_adder_random
+     -.--ns INFO     cocotb.gpi                         ..mbed/gpi_embed.cpp:77   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     cocotb.gpi                         ../gpi/GpiCommon.cpp:105  in gpi_print_registered_impl       VPI registered
+     -.--ns INFO     cocotb.gpi                         ..mbed/gpi_embed.cpp:240  in _embed_sim_init                 Python interpreter initialized and cocotb loaded!
+     0.00ns INFO     cocotb                                      __init__.py:220  in _initialise_testbench_          Running on Icarus Verilog version 11.0 (stable)
+     0.00ns INFO     cocotb                                      __init__.py:226  in _initialise_testbench_          Running tests with cocotb v1.5.0 from /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/cocotb
+     0.00ns INFO     cocotb                                      __init__.py:247  in _initialise_testbench_          Seeding Python random module with 1660809813
+uvm-python: Used simulator is |Icarus Verilog|
+UVM_INFO @ 0.0NS: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+uvm-python 0.2.0 (Ported from UVM 1.2)
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+(C) 2019-2021 Tuomas Poikela (tpoikela)
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a Python version of the UVM library which 
+  requires cocotb and an HDL simulator.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0.0NS: reporter [DEFVERB] No verbosity specified on the command line.  Using the default: UVM_MEDIUM
+UVM_WARNING /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_registry.py(230) @ 0.0NS: reporter [COMP_REGD] trans has already been added into the UVMObjectRegistry
+UVM_WARNING /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_factory.py(179) @ 0.0NS: reporter [TPRGED] Type name 'trans' already registered with factory. No string-based lookup support for multiple types with the same type name.
+     0.00ns INFO     cocotb.regression                         regression.py:127  in __init__                        Found test tb_top.module_tb
+     0.00ns INFO     cocotb.regression                         regression.py:468  in _start_test                     Running test 1/1: module_tb
+     0.00ns INFO     ..otb.test.module_tb.0x7fd32c9fa910       decorators.py:312  in _advance                        Starting test: "module_tb"
+                                                                                                                     Description: None
+UVM_INFO @ 0.0NS: reporter [RNTST] Running test test_adder_random...
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/testbench.py(14) @ 0.0NS: uvm_test_top.tb0 [adder_tb] adder_tb created
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/agent.py(16) @ 0.0NS: uvm_test_top.tb0.m_env.adder agent [AGE] adder agent created
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/sequencer.py(8) @ 0.0NS: uvm_test_top.tb0.m_env.adder agent.sequencer [SEQR] sequencer created!
+AGE  <sequencer.sequencer object at 0x7fd32d45a9d0>
+/Users/arun/Projects/cocotb-adder-example/monitor.py:25: RuntimeWarning: Timer setup with value 0, which might exhibit undefined behavior in some simulators
+  await Timer(0, "ns")
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(26) @ 0.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] driver getting request
+RAT <sequencer.sequencer object at 0x7fd32d45a9d0>
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/test_adder.py(35) @ 0.0NS: uvm_test_top [RANDOM ADDER TEST] forking master proc seq
+SEQ, seqr <sequencer.sequencer object at 0x7fd32d45a9d0>
+VCD info: dumpfile dump.vcd opened for output.
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(29) @ 0.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] got item from seq item port: a:15, b:12
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(26) @ 0.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] driver getting request
+UVM_INFO /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_phase.py(63) @ 0.0NS: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.pre_reset' (id=93) PHASE READY TO END
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/sequence.py(33) @ 0.0NS: reporter [seq] input1: 15, input2: 12
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 0.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item a:F, b:C
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 0.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item answer: 1B
+/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/sv.py:249: FutureWarning: `str(ModifiableObject)` is deprecated, and in future will return `ModifiableObject._path`. To get a string representation of the value, use `str(ModifiableObject.value)`.
+  return msg.format(*args)
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/scoreboard.py(18) @ 0.0NS: uvm_test_top.tb0.scoreboard [scoreboard] transans: 1111, 1100, 27
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 0.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item a:F, b:C
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 0.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item answer: 1B
+UVM_INFO /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_phase.py(63) @ 0.0NS: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.reset' (id=103) PHASE READY TO END
+UVM_INFO /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_phase.py(63) @ 0.0NS: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.post_reset' (id=113) PHASE READY TO END
+UVM_INFO /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_phase.py(63) @ 0.0NS: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.pre_configure' (id=123) PHASE READY TO END
+UVM_INFO /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_phase.py(63) @ 0.0NS: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.configure' (id=133) PHASE READY TO END
+UVM_INFO /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_phase.py(63) @ 0.0NS: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.post_configure' (id=143) PHASE READY TO END
+UVM_INFO /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_phase.py(63) @ 0.0NS: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.pre_main' (id=153) PHASE READY TO END
+UVM_INFO /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_phase.py(63) @ 0.0NS: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.main' (id=163) PHASE READY TO END
+UVM_INFO /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_phase.py(63) @ 0.0NS: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.post_main' (id=173) PHASE READY TO END
+UVM_INFO /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_phase.py(63) @ 0.0NS: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.pre_shutdown' (id=183) PHASE READY TO END
+UVM_INFO /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_phase.py(63) @ 0.0NS: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.shutdown' (id=193) PHASE READY TO END
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(29) @ 5.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] got item from seq item port: a:10, b:7
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(26) @ 5.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] driver getting request
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/sequence.py(33) @ 5.0NS: reporter [seq] input1: 10, input2: 7
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 5.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item a:F, b:7
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 5.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item answer: 16
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/scoreboard.py(18) @ 5.0NS: uvm_test_top.tb0.scoreboard [scoreboard] transans: 1111, 0111, 22
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 5.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item a:F, b:7
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 5.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item answer: 16
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 5.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item a:A, b:7
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 5.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item answer: 11
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/scoreboard.py(18) @ 5.0NS: uvm_test_top.tb0.scoreboard [scoreboard] transans: 1010, 0111, 17
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 5.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item a:A, b:7
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 5.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item answer: 11
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(29) @ 10.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] got item from seq item port: a:3, b:7
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(26) @ 10.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] driver getting request
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/sequence.py(33) @ 10.0NS: reporter [seq] input1: 3, input2: 7
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 10.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item a:3, b:7
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 10.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item answer: A
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/scoreboard.py(18) @ 10.0NS: uvm_test_top.tb0.scoreboard [scoreboard] transans: 0011, 0111, 10
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 10.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item a:3, b:7
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 10.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item answer: A
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(29) @ 15.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] got item from seq item port: a:15, b:13
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(26) @ 15.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] driver getting request
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/sequence.py(33) @ 15.0NS: reporter [seq] input1: 15, input2: 13
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 15.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item a:3, b:D
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 15.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item answer: 10
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/scoreboard.py(18) @ 15.0NS: uvm_test_top.tb0.scoreboard [scoreboard] transans: 0011, 1101, 16
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 15.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item a:3, b:D
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 15.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item answer: 10
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 15.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item a:F, b:D
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 15.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item answer: 1C
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/scoreboard.py(18) @ 15.0NS: uvm_test_top.tb0.scoreboard [scoreboard] transans: 1111, 1101, 28
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 15.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item a:F, b:D
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 15.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item answer: 1C
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(29) @ 20.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] got item from seq item port: a:5, b:3
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(26) @ 20.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] driver getting request
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/sequence.py(33) @ 20.0NS: reporter [seq] input1: 5, input2: 3
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 20.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item a:F, b:3
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 20.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item answer: 12
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/scoreboard.py(18) @ 20.0NS: uvm_test_top.tb0.scoreboard [scoreboard] transans: 1111, 0011, 18
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 20.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item a:F, b:3
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 20.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item answer: 12
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 20.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item a:5, b:3
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 20.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item answer: 8
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/scoreboard.py(18) @ 20.0NS: uvm_test_top.tb0.scoreboard [scoreboard] transans: 0101, 0011, 8
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 20.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item a:5, b:3
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 20.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item answer: 8
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(29) @ 25.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] got item from seq item port: a:2, b:3
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(26) @ 25.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] driver getting request
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/sequence.py(33) @ 25.0NS: reporter [seq] input1: 2, input2: 3
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 25.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item a:2, b:3
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 25.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item answer: 5
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/scoreboard.py(18) @ 25.0NS: uvm_test_top.tb0.scoreboard [scoreboard] transans: 0010, 0011, 5
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 25.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item a:2, b:3
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 25.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item answer: 5
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(29) @ 30.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] got item from seq item port: a:8, b:6
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(26) @ 30.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] driver getting request
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/sequence.py(33) @ 30.0NS: reporter [seq] input1: 8, input2: 6
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 30.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item a:2, b:6
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 30.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item answer: 8
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/scoreboard.py(18) @ 30.0NS: uvm_test_top.tb0.scoreboard [scoreboard] transans: 0010, 0110, 8
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 30.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item a:2, b:6
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 30.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item answer: 8
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 30.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item a:8, b:6
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 30.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item answer: E
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/scoreboard.py(18) @ 30.0NS: uvm_test_top.tb0.scoreboard [scoreboard] transans: 1000, 0110, 14
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 30.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item a:8, b:6
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 30.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item answer: E
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(29) @ 35.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] got item from seq item port: a:1, b:6
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(26) @ 35.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] driver getting request
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/sequence.py(33) @ 35.0NS: reporter [seq] input1: 1, input2: 6
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 35.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item a:1, b:6
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 35.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item answer: 7
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/scoreboard.py(18) @ 35.0NS: uvm_test_top.tb0.scoreboard [scoreboard] transans: 0001, 0110, 7
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 35.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item a:1, b:6
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 35.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item answer: 7
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(29) @ 40.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] got item from seq item port: a:11, b:8
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(26) @ 40.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] driver getting request
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/sequence.py(33) @ 40.0NS: reporter [seq] input1: 11, input2: 8
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 40.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item a:1, b:8
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 40.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item answer: 9
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/scoreboard.py(18) @ 40.0NS: uvm_test_top.tb0.scoreboard [scoreboard] transans: 0001, 1000, 9
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 40.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item a:1, b:8
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 40.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item answer: 9
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 40.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item a:B, b:8
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 40.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item answer: 13
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/scoreboard.py(18) @ 40.0NS: uvm_test_top.tb0.scoreboard [scoreboard] transans: 1011, 1000, 19
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 40.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item a:B, b:8
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 40.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item answer: 13
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(29) @ 45.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] got item from seq item port: a:5, b:8
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/driver.py(26) @ 45.0NS: uvm_test_top.tb0.m_env.adder agent.driver [arun] driver getting request
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/sequence.py(33) @ 45.0NS: reporter [seq] input1: 5, input2: 8
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 45.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item a:5, b:8
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 45.0NS: uvm_test_top.tb0.m_env.monitor [UVMMonitor] item answer: D
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/scoreboard.py(18) @ 45.0NS: uvm_test_top.tb0.scoreboard [scoreboard] transans: 0101, 1000, 13
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(32) @ 45.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item a:5, b:8
+
+UVM_INFO /Users/arun/Projects/cocotb-adder-example/monitor.py(33) @ 45.0NS: uvm_test_top.tb0.m_env.adder agent.monitor [UVMMonitor] item answer: D
+UVM_INFO /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_phase.py(63) @ 50.0NS: reporter [PH/TRC/EXE/ALLDROP] Phase 'common.run' (id=67) PHASE EXIT ALL_DROPPED
+UVM_INFO /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_phase.py(63) @ 50.0NS: reporter [PH_READY_TO_END] Phase 'common.run' (id=67) PHASE READY TO END
+UVM_INFO /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_phase.py(63) @ 50.0NS: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.post_shutdown' (id=203) PHASE READY TO END
+UVM_INFO /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/uvm/base/uvm_report_server.py(568) @ 50.0NS: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO : 127
+UVM_WARNING : 2
+UVM_ERROR : 0
+UVM_FATAL : 0
+** Report counts by id
+[UVM/RELNOTES] 1
+[DEFVERB] 1
+[COMP_REGD] 1
+[TPRGED] 1
+[RNTST] 1
+[adder_tb] 1
+[AGE] 1
+[SEQR] 1
+[arun] 21
+[RANDOM ADDER TEST] 1
+[PH_READY_TO_END] 13
+[seq] 10
+[UVMMonitor] 60
+[scoreboard] 15
+[PH/TRC/EXE/ALLDROP] 1
+
+UVM_INFO @ 50.0NS: reporter [FINISH] $finish was reached in run_test()
+    50.00ns INFO     cocotb.regression                         regression.py:364  in _score_test                     Test Passed: module_tb
+    50.00ns INFO     cocotb.regression                         regression.py:487  in _log_test_summary               Passed 1 tests (0 skipped)
+    50.00ns INFO     cocotb.regression                         regression.py:557  in _log_test_summary               **************************************************************************
+                                                                                                                     ** TEST              PASS/FAIL  SIM TIME(NS)  REAL TIME(S)  RATIO(NS/S) **
+                                                                                                                     **************************************************************************
+                                                                                                                     ** tb_top.module_tb    PASS           50.00          0.25       197.17  **
+                                                                                                                     **************************************************************************
+                                                                                                                     
+    50.00ns INFO     cocotb.regression                         regression.py:574  in _log_sim_summary                *************************************************************************************
+                                                                                                                     **                                 ERRORS : 0                                      **
+                                                                                                                     *************************************************************************************
+                                                                                                                     **                               SIM TIME : 50.00 NS                               **
+                                                                                                                     **                              REAL TIME : 0.61 S                                 **
+                                                                                                                     **                        SIM / REAL TIME : 81.38 NS/S                             **
+                                                                                                                     *************************************************************************************
+                                                                                                                     
+    50.00ns INFO     cocotb.regression                         regression.py:259  in tear_down                       Shutting down..
