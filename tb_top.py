@@ -1,6 +1,8 @@
 from adder_if import adder_if
 from uvm.base.sv import sv
 from uvm.base import run_test
+from test_adder import *
+from testbench import adder_tb
 
 import cocotb
 
@@ -16,6 +18,6 @@ async def module_tb(dut) :
     vif = adder_if(dut)
 
     proc_run_test = cocotb.fork(initial_run_test(dut, vif))
-    proc_vif = cocotb.fork(vif.start())
+    #proc_vif = cocotb.fork(vif.start())
 
     await sv.fork_join([proc_run_test])
